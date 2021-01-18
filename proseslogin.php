@@ -2,20 +2,14 @@
 @ob_start();
 require_once("koneksi.php");
 
- $username = filter_input(INPUT_POST, 'username');
- $pass  = filter_input(INPUT_POST, 'password');
+$username = mysqli_real_escape_string($conn, $_POST['username']);
+$pass  = mysqli_real_escape_string($conn, $_POST['password']);
 
- $login = "SELECT * FROM user WHERE username=:username";
- $stmt = $db->prepare($login);
-
- $params = array(
-   ":username" => $username
- );
-
- $stmt->execute($params);
- $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-if ($user){
+$query = mysqli_query($conn, "SELECT * FROM user WHERE username='$username'");
+$find = mysqli_num_rows($query);
+$user = mysqli_fetch_array($query);
+ 
+if ($find > 0){
   if (password_verify($pass, $user['password'])){
     session_start();
     $_SESSION['email'] = $user['email'];

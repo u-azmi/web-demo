@@ -13,7 +13,8 @@ session_start();
                         echo "<h2>Welcome, $_SESSION[name]</h2>
                             <p>Pilih menu list untuk melihat dafar pengguna</p>
                             <div class='button_option_post'>
-                                <button name='list_button' onclick='biodata()'>List Biodata</button>
+                                <button name='list_button' onclick='list_peserta()'>List Peserta</button>
+                                <button name='input_bio_button' onclick='input_peserta()'>Input Data Peserta</button>
                                 <button name='logout_button' onclick='logout()'>Logout</button>
                             </div>";   
                     }else{

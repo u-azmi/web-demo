@@ -1,148 +1,112 @@
-/*Style*/
-
 body {
-    font: 16px/28px arial, sans-serif;
-    background-color: #eaeaea;
-    color: #333;    
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-#akun{
-    padding-right: 1%;   
+h1 {
+  margin: 0;
+  padding: 0;
 }
 
-.container{
-    width: 1200px;
-    margin: auto;
-    background-color: #fff;
+input {
+  width: 200px;
+  height: 25px;
+  border-radius: 0.2em;
+  border: 1px solid #9E9E9E;
+  padding: .3em;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.header{
-    left: 0;
-    width: 1180px;
-    padding: 10px;
-    background-color: #fff;
+button {
+  cursor: pointer;
+  height: 25px;
+  border-radius: 0.2em;
+  border: 1px solid #9E9E9E;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
 }
 
-.header img{
-    position: absolute;
+.content {
+  position: relative;
+  top: 25%;
 }
 
-.menu ul li{
-    position: relative;
-    display: inline-block;
-    right: -270px;
-    margin-right: 20px;
+.content .input, .content .show, .content .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.menu ul{
-    margin-top: 2px;
+.content .input h1, .content .show h1, .content .login h1 {
+  text-transform: capitalize;
+  margin-bottom: 1em;
 }
 
-.menu a{
-    text-decoration: none;
-    color: black;
+.content .input form, .content .show form, .content .login form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.menu a:hover{
-    color: #A3004D;
+.content .input form button, .content .show form button, .content .login form button {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
 }
 
-.menu .button1:hover{
-    background-color: rgb(173, 88, 128);
-    color: #fff;
+.content .input form input, .content .show form input, .content .login form input {
+  margin-bottom: 1em;
 }
 
-.cover{
-    height: 700px; 
-    background-image: url(../img/cover.png);
-    background-size: cover;
-    background-position: 0 -100px;
+.content .input form table, .content .show form table, .content .login form table {
+  border-collapse: collapse;
 }
 
-.cover .text{
-    position: absolute;
-    bottom: 150px;
-    left: 140px;
+.content .show table {
+  border-collapse: collapse;
+  border-radius: 1em;
+  text-align: center;
 }
 
-.cover .text h1{
-    color: #fff;
-    font-size: 70px;
-    font-weight: bold;
+.content .show table, .content .show th, .content .show td {
+  border: 1px solid #9E9E9E;
 }
 
-.cover .button2{
-    position: absolute;
-    left: 145px;
-    top: 550px;
-    padding: 15px 15px;
-    border: 2px solid rgb(252, 173, 62); 
-    background-color: rgb(252, 173, 62); 
-    color: #fafafa; 
-    font-weight: bold;
+.content .show th, .content .show td {
+  padding: 1em;
 }
 
-.cover .button2:hover{
-    background-color: rgb(218, 157, 73);
-    color: rgb(218, 214, 214);
+.content .show td {
+  width: 5em;
 }
 
-.cover .button3{
-    position: absolute;
-    left: 330px;
-    top: 550px;
-    padding: 15px 15px;
-    border: 2px solid #A3004D;; 
-    background-color: #A3004D;; 
-    color: #fafafa; 
-    font-weight: bold;
+.content .show a {
+  color: black;
+  border-radius: 0.2em;
+  margin-top: 1em;
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  background-color: #9E9E9E;
 }
-
-.cover .button3:hover{
-    background-color: rgb(136, 2, 65);
-    color: rgb(218, 214, 214);
-}
-
-.content h2{
-    text-align: center;
-    margin-top: 50px;
-    font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-}
-
-.content .card {
-    margin: 4%;
-    display: inline-block;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 25%;
-}
-
-.content .card p {
-    width: 1200px;
-}
-
-
-.content .card:hover {
-    box-shadow: 0 8px 16px 0 rgb(173, 88, 128);
-}
-
-.content .card img {
-    border-radius: 3px 3px 0 0;
-    width: 100%;
-}
-
-.content .container {
-    width: 100px;
-}
-
-footer{
-    position: relative;
-    background-color: #202020;
-    color: white;
-    width: 1168px;
-    left: 68px;
-    text-align: center;
-    padding: 15px;
-}
+/*# sourceMappingURL=style.css.map */
