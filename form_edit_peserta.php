@@ -18,10 +18,11 @@ $query = mysqli_query($conn, "SELECT * FROM peserta WHERE id='$id'");
             <input type="text" placeholder="Nama Lengkap" name="nama" value='<?= $peserta['nama']; ?>'>
             <input type="text" placeholder="Bio" name="bio" value='<?= $peserta['bio']; ?>'>
             <div class="fotoprofil">
-                <input type="file" placeholder="Foto Profil" name="gambar">
+                <input type="file" id='profile_input' placeholder="Foto Profil" name="gambar">
                 <img id="profile" src="./img/<?= $peserta['gambar']; ?>" alt="foto profil" width="35" height="35" style="position:absolute; margin-left:10px; ">
             </div>
             <button type="submit" name='submit'>Edit</button>
+            <a href="./index.php" style="margin-top:5px; text-decoration: none;"> << Home</a>
         </form> <?php }?>
     </div>
 </div>

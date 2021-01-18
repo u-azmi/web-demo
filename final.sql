@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 18, 2021 at 03:23 AM
--- Server version: 10.4.16-MariaDB
--- PHP Version: 7.4.12
+-- Generation Time: Jan 18, 2021 at 10:18 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,7 +40,8 @@ CREATE TABLE `peserta` (
 --
 
 INSERT INTO `peserta` (`id`, `no_peserta`, `nama`, `bio`, `gambar`) VALUES
-(1, 'P3E119024', 'Ulul Azmi', 'Teknik Mesin', 'coba.jpeg');
+(2, 'P3E119025', 'Phieta Tiara Lingga Dewi', 'Teknik Elektro', 'peserta_548.jpg'),
+(3, 'P3E119024', 'Ulul Azmi ', 'Teknik Fisika', 'peserta_993.jpeg');
 
 -- --------------------------------------------------------
 
@@ -82,6 +83,12 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `peserta`
+--
+ALTER TABLE `peserta`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`

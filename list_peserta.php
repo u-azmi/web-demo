@@ -33,6 +33,10 @@ $peserta = $query->fetch_all(MYSQLI_ASSOC);
 				</tr>
 				<?php endforeach; ?>
 			</table>
+			<div class="navigate" style="margin-top: 10px; padding: 20px;">
+				<button name='index_button' onclick='index()'>Home</button>
+				<button name='input_bio_button' onclick='input_peserta()'>Input Data Peserta</button>	
+			</div>
 		</div>
 	</div>
 </div>

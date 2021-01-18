@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
     $bio = $_POST['bio'];
     $check_image = FALSE;
 
-    if($_FILES['gambar']['name'] > 0){
+    if(getimagesize($_FILES["gambar"]["tmp_name"])){
         $check_image = getimagesize($_FILES["gambar"]["tmp_name"]);
     };
 

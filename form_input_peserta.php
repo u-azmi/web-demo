@@ -14,6 +14,7 @@ session_start();
                 <input type="text" placeholder="Bio" name="bio">
                 <input type="file" value="Foto Profile" name="gambar">
                 <button type="submit" name='submit'>Input</button>
+                <a href="./index.php" style="margin-top:5px; text-decoration: none;"> << Home</a>
             </form>
         </div>
     </div>

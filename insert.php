@@ -16,8 +16,8 @@ if(isset($_POST['submit'])){
     
         if(in_array($extension, $allowed_extension) === true){
             move_uploaded_file($tmp_file, './img/'.$new_file);
-            mysqli_query($conn, "INSERT INTO `peserta`(`no_peserta`, `nama`, `bio`, `gambar`) VALUES ('$no', '$nama', '$bio', '$new_file')");
-
+            $in = mysqli_query($conn, "INSERT INTO `peserta`(`no_peserta`, `nama`, `bio`, `gambar`) VALUES ('$no', '$nama', '$bio', '$new_file')");
+            
             echo "<script> 
             alert('Data berhasil di input');
             document.location='list_peserta.php';
