@@ -5,8 +5,8 @@
         <div class="login">
             <h1>login</h1>
             <form action="./proseslogin.php" method="POST">
-                <input type="text" placeholder="Username" name="username">
-                <input type="password" placeholder="Password" name="password">
+                <input type="text" placeholder="Username" name="username" required>
+                <input type="password" placeholder="Password" name="password" required>
                 <button type="submit" name='submit'>Login</button>
             </form>
         </div>
