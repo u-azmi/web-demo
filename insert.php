@@ -1,5 +1,6 @@
 <?php 
 require_once("./koneksi.php");
+
 if(isset($_POST['submit'])){
     $no = $_POST['no_peserta'];
     $nama = $_POST['nama'];
@@ -16,7 +17,7 @@ if(isset($_POST['submit'])){
     
         if(in_array($extension, $allowed_extension) === true){
             move_uploaded_file($tmp_file, './img/'.$new_file);
-            $in = mysqli_query($conn, "INSERT INTO `peserta`(`no_peserta`, `nama`, `bio`, `gambar`) VALUES ('$no', '$nama', '$bio', '$new_file')");
+            mysqli_query($conn, "INSERT INTO peserta (no_peserta, nama, bio, gambar) VALUES ('$no', '$nama', '$bio', '$new_file')");
             
             echo "<script> 
             alert('Data berhasil di input');
@@ -34,6 +35,22 @@ if(isset($_POST['submit'])){
         document.location='./form_input_peserta.php';
         </script>"; 
     } 
+};
+
+
+if(isset($_POST['username'])){
+    $username = $_POST['username'];
+    $nama = $_POST['nama'];
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+ 
+    $saved = mysqli_query($conn, "INSERT INTO user (username, nama, email, password) VALUES ('$username', '$nama', '$email', '$password')");
+ 
+   
+    if($saved) {
+        echo "<script> alert('Registrasi Berhasil. Silahkan Login'); </script>";
+        header("Location: login.php");
+    }
 };
 
 ?>
